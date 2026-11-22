@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container" id="authSection">
+        <h1>TaskFlow</h1>
+        <p>Manage your tasks smartly!</p>
+
+        <div id="registerForm">
+            <h2>Create Account</h2>
+            <input type="text" id="regName" placeholder="Your Name">
+            <input type="email" id="regEmail" placeholder="Email">
+            <input type="password" id="regPassword" placeholder="Password">
+            <button onclick="register()">Sign Up</button>
+            <p>Already registered? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+
+        <div id="loginForm" class="hidden">
+            <h2>Welcome Back</h2>
+            <input type="email" id="loginEmail" placeholder="Email">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p>New user? <a href="#" onclick="showRegister()">Sign Up</a></p>
+        </div>
+    </div>
+
+    <div class="dashboard hidden" id="dashboard">
+        <header>
+            <h1>TaskFlow</h1>
+            <button onclick="logout()">Logout</button>
+        </header>
+
+        <h2>My Tasks</h2>
+
+        <div class="add-task">
+            <input type="text" id="taskTitle" placeholder="Enter task title">
+            <input type="text" id="taskDescription" placeholder="Description">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <div id="taskList"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
